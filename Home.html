@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <!-- By: DOHA WALEED -->
+    <style>
+        body {
+            background-color: #f4f7f6;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; 
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .form-container {
+            background-color: white;
+            width: 100%;
+            max-width: 450px; 
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 0;
+            text-align: center;
+        }
+        
+        p.subtitle {
+            color: #666;
+            font-size: 14px;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"], 
+        input[type="password"], 
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+
+        .radio-group, .checkbox-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        
+        .radio-group label, .checkbox-group label {
+            font-size: 14px;
+            color: #555;
+            margin-right: 15px;
+        }
+
+        .section-title {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #333;
+            font-size: 14px;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 25px;
+        }
+
+        button {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .btn-submit {
+            background-color: #8da399; 
+            color: white;
+        }
+
+        .btn-submit:hover {
+            background-color: #7a8f85;
+        }
+
+        .btn-reset {
+            background-color: #eee;
+            color: #333;
+        }
+
+        .btn-reset:hover {
+            background-color: #ddd;
+        }
+
+        .footer-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #8da399;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .footer-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>My HTML Form</h2>
+        <p class="subtitle">Please fill in your data</p>
+
+        <form>
+            <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName">
+            </div>
+
+            <div class="form-group">
+                <label for="midName">Mid Name</label>
+                <input type="text" id="midName" name="midName">
+            </div>
+
+            <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password">
+            </div>
+
+            <div class="radio-group">
+                <span class="section-title">Gender:</span>
+                <input type="radio" id="male" name="gender" value="Male">
+                <label for="male">Male</label>
+                
+                <input type="radio" id="female" name="gender" value="Female">
+                <label for="female">Female</label>
+            </div>
+
+            <div class="checkbox-group">
+                <span class="section-title">Learned Languages:</span>
+                <input type="checkbox" id="english" name="lang" value="English">
+                <label for="english">English</label>
+                <br>
+                <input type="checkbox" id="german" name="lang" value="German">
+                <label for="german">German</label>
+                <br>
+                <input type="checkbox" id="french" name="lang" value="French">
+                <label for="french">French</label>
+                <br>
+                <input type="checkbox" id="chinese" name="lang" value="Chinese">
+                <label for="chinese">Chinese</label>
+            </div>
+
+            <div class="form-group">
+                <label for="country">Choose your Country:</label>
+                <select id="country" name="country">
+                    <option value="EGYPT">EGYPT</option>
+                </select>
+            </div>
+
+            <div class="btn-group">
+                <button type="submit" class="btn-submit">Submit</button>
+                <button type="reset" class="btn-reset">Reset</button>
+            </div>
+        </form>
+
+        <a href="Login.HTML" class="footer-link">Back to Login Page</a>
+    </div>
+
+</body>
+</html>

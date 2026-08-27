@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <style>
+        body {
+            background-color: #f4f7f6;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-box {
+            background-color: white;
+            width: 350px;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 0;
+        }
+        
+        p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0 20px 0;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+
+        .checkbox-container {
+            text-align: left;
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #8da399; 
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #7a8f85;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- الصندوق اللي هيلم كل العناصر جواه -->
+    <div class="login-box">
+        
+        <h2>Login Page</h2>
+        <p>Please enter your username and password</p>
+
+        <div style="text-align: left;">
+            <label for="username" style="font-size: 14px; color: #333;">Username:</label>
+        </div>
+        <input type="text" id="username" placeholder="Student's name">
+
+        <div style="text-align: left;">
+            <label for="password" style="font-size: 14px; color: #333;">Password:</label>
+        </div>
+        <input type="password" id="password" placeholder="Student's code">
+
+        <div class="checkbox-container">
+            <input type="checkbox" id="showPassword" onclick="togglePassword()">
+            <label for="showPassword">Show Password</label>
+        </div>
+
+        <button onclick="validateLogin()">Login</button>
+
+    </div>
+
+    <script>
+        function togglePassword() {
+            var passField = document.getElementById("password");
+            if (passField.type === "password") {
+                passField.type = "text";
+            } else {
+                passField.type = "password";
+            }
+        }
+
+        function validateLogin() {
+            var user = document.getElementById("username").value;
+            var pass = document.getElementById("password").value;
+            var studentCode = "4260366"; 
+
+            if (user.trim() === "" || pass.trim() === "") {
+                alert("Login failed: Username or Password cannot be empty.");
+            } 
+            else if (user.trim().toLowerCase() === "doha waleed" && pass === studentCode) {
+                alert("Login Succeeded");
+                window.location.href = "home.html";
+            } else {
+                alert("Login failed: Incorrect Username or Password.");
+            }
+        }
+    </script>
+
+</body>
+</html>
